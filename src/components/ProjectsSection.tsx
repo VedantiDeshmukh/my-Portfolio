@@ -1,34 +1,80 @@
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
+
+const categories = ["All Projects", "AI/ML", "Generative AI", "Agentic AI", "Web Dev", "Data Analysis"];
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    desc: "A full-stack online store with cart, payments, and admin dashboard.",
-    tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
+    title: "Research Agent (Agent Builder)",
+    desc: "Multi-agent AI workflow for real-time research and insights.",
+    tags: ["Python", "LangChain", "GPT-4"],
+    category: "Agentic AI",
     color: "from-primary/20 to-primary/5",
   },
   {
-    title: "Task Management App",
-    desc: "Collaborative project management tool with real-time updates.",
-    tags: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
+    title: "Github Events Notifier",
+    desc: "Turns GitHub events into intelligent AI-powered notifications.",
+    tags: ["n8n", "Node.js", "GitHub API"],
+    category: "Agentic AI",
     color: "from-blue-500/20 to-blue-500/5",
   },
   {
-    title: "AI Content Generator",
-    desc: "An AI-powered tool for generating marketing copy and blog posts.",
-    tags: ["React", "OpenAI", "Express", "MongoDB"],
+    title: "CODEVO",
+    desc: "AI tool for automated code review and generation.",
+    tags: ["React", "OpenAI", "TypeScript"],
+    category: "Generative AI",
     color: "from-emerald-500/20 to-emerald-500/5",
   },
   {
-    title: "Portfolio Template",
-    desc: "A customizable developer portfolio with dark theme and animations.",
-    tags: ["React", "Framer Motion", "Tailwind"],
+    title: "Image Classifier",
+    desc: "Deep learning model for multi-class image classification.",
+    tags: ["Python", "TensorFlow", "CNN"],
+    category: "AI/ML",
     color: "from-purple-500/20 to-purple-500/5",
+  },
+  {
+    title: "Sentiment Analyzer",
+    desc: "NLP-based sentiment analysis tool for social media data.",
+    tags: ["Python", "NLTK", "Flask"],
+    category: "AI/ML",
+    color: "from-orange-500/20 to-orange-500/5",
+  },
+  {
+    title: "E-Commerce Platform",
+    desc: "Full-stack online store with cart, payments, and admin dashboard.",
+    tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
+    category: "Web Dev",
+    color: "from-cyan-500/20 to-cyan-500/5",
+  },
+  {
+    title: "Sales Dashboard",
+    desc: "Interactive data visualization dashboard for sales analytics.",
+    tags: ["Python", "Pandas", "Plotly"],
+    category: "Data Analysis",
+    color: "from-rose-500/20 to-rose-500/5",
+  },
+  {
+    title: "AI Content Generator",
+    desc: "AI-powered tool for generating marketing copy and blog posts.",
+    tags: ["React", "OpenAI", "Express"],
+    category: "Generative AI",
+    color: "from-amber-500/20 to-amber-500/5",
   },
 ];
 
 const ProjectsSection = () => {
+  const [active, setActive] = useState("All Projects");
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const filtered = active === "All Projects" ? projects : projects.filter((p) => p.category === active);
+
+  const scroll = (dir: "left" | "right") => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({ left: dir === "left" ? -350 : 350, behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="projects" className="section-padding">
       <div className="max-w-7xl mx-auto">
@@ -38,43 +84,84 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
         >
           <p className="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-2">Projects</p>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-12">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-8">
             Featured <span className="heading-gradient">work</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((p, i) => (
-            <motion.div
-              key={p.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="card-glass rounded-xl overflow-hidden group"
+        {/* Category Tabs */}
+        <div className="flex flex-wrap gap-3 mb-8">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActive(cat)}
+              className={`px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${
+                active === cat
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-transparent text-muted-foreground border-border hover:border-primary/50 hover:text-foreground"
+              }`}
             >
-              <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center`}>
-                <span className="font-heading text-2xl font-bold text-foreground/30">{p.title}</span>
-              </div>
-              <div className="p-6">
-                <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{p.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {p.tags.map((t) => (
-                    <span key={t} className="bg-secondary text-secondary-foreground text-xs px-2.5 py-1 rounded-full">{t}</span>
-                  ))}
-                </div>
-                <div className="flex gap-4 text-muted-foreground">
-                  <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm">
-                    <Github size={16} /> Code
-                  </a>
-                  <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm">
-                    <ExternalLink size={16} /> Live
-                  </a>
-                </div>
-              </div>
-            </motion.div>
+              {cat}
+            </button>
           ))}
+        </div>
+
+        {/* Scroll Controls */}
+        <div className="relative">
+          <button
+            onClick={() => scroll("left")}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-secondary transition-colors hidden md:flex"
+          >
+            <ChevronLeft size={20} className="text-foreground" />
+          </button>
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-secondary transition-colors hidden md:flex"
+          >
+            <ChevronRight size={20} className="text-foreground" />
+          </button>
+
+          {/* Horizontal Scroll */}
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory px-2"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {filtered.map((p, i) => (
+              <motion.div
+                key={p.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.05 }}
+                className="card-glass rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0"
+              >
+                <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative`}>
+                  <span className="font-heading text-xl font-bold text-foreground/20 text-center px-4">{p.title}</span>
+                  <span className="absolute top-3 right-3 bg-background/70 backdrop-blur-sm text-xs px-2.5 py-1 rounded-full text-muted-foreground border border-border">
+                    {p.category}
+                  </span>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{p.title}</h3>
+                  <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {p.tags.map((t) => (
+                      <span key={t} className="bg-secondary text-secondary-foreground text-xs px-2.5 py-1 rounded-full">{t}</span>
+                    ))}
+                  </div>
+                  <div className="flex gap-4 text-muted-foreground">
+                    <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm">
+                      <Github size={16} /> Code
+                    </a>
+                    <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm">
+                      <ExternalLink size={16} /> Live
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
