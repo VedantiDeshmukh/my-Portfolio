@@ -66,19 +66,33 @@ const HeroSection = () => {
           >
             <div
               onClick={() => fileInputRef.current?.click()}
-              className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full cursor-pointer group border-2 border-primary/30 hover:border-primary/60 transition-colors overflow-hidden"
-              style={{ boxShadow: "0 0 40px hsl(var(--primary) / 0.15)" }}
+              className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 cursor-pointer group"
             >
+              {/* Blended glow behind photo */}
+              <div className="absolute inset-0 rounded-full opacity-40 blur-2xl" style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.5), transparent 70%)" }} />
+              
               {profilePhoto ? (
-                <img src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover" />
+                <div className="relative w-full h-full rounded-full overflow-hidden">
+                  <img src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover" />
+                  {/* Gradient blend edges */}
+                  <div className="absolute inset-0 rounded-full" style={{
+                    background: "radial-gradient(circle, transparent 55%, hsl(var(--background)) 100%)"
+                  }} />
+                </div>
               ) : (
-                <div className="w-full h-full bg-muted/30 flex flex-col items-center justify-center gap-3 group-hover:bg-muted/50 transition-colors">
-                  <Camera size={32} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                  <span className="text-xs text-muted-foreground font-heading tracking-wider uppercase">Upload Photo</span>
+                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/20">
+                  <div className="w-full h-full bg-muted/20 flex flex-col items-center justify-center gap-3 group-hover:bg-muted/40 transition-colors">
+                    <Camera size={32} className="text-muted-foreground group-hover:text-primary transition-colors" />
+                    <span className="text-xs text-muted-foreground font-heading tracking-wider uppercase">Upload Photo</span>
+                  </div>
+                  {/* Gradient blend on empty state too */}
+                  <div className="absolute inset-0 rounded-full pointer-events-none" style={{
+                    background: "radial-gradient(circle, transparent 60%, hsl(var(--background)) 100%)"
+                  }} />
                 </div>
               )}
               {profilePhoto && (
-                <div className="absolute inset-0 bg-background/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 rounded-full bg-background/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <Camera size={28} className="text-primary" />
                 </div>
               )}
