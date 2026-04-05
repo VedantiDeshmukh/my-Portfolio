@@ -11,6 +11,7 @@ const projects = [
     tags: ["Python", "LangChain", "GPT-4"],
     category: "Agentic AI",
     color: "from-primary/20 to-primary/5",
+    image: "", // Add your image URL here e.g. "/projects/research-agent.png"
   },
   {
     title: "Github Events Notifier",
@@ -18,6 +19,7 @@ const projects = [
     tags: ["n8n", "Node.js", "GitHub API"],
     category: "Agentic AI",
     color: "from-blue-500/20 to-blue-500/5",
+    image: "",
   },
   {
     title: "CODEVO",
@@ -25,6 +27,7 @@ const projects = [
     tags: ["React", "OpenAI", "TypeScript"],
     category: "Generative AI",
     color: "from-emerald-500/20 to-emerald-500/5",
+    image: "",
   },
   {
     title: "Image Classifier",
@@ -32,6 +35,7 @@ const projects = [
     tags: ["Python", "TensorFlow", "CNN"],
     category: "AI/ML",
     color: "from-purple-500/20 to-purple-500/5",
+    image: "",
   },
   {
     title: "Sentiment Analyzer",
@@ -39,6 +43,7 @@ const projects = [
     tags: ["Python", "NLTK", "Flask"],
     category: "AI/ML",
     color: "from-orange-500/20 to-orange-500/5",
+    image: "",
   },
   {
     title: "E-Commerce Platform",
@@ -46,6 +51,7 @@ const projects = [
     tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
     category: "Web Dev",
     color: "from-cyan-500/20 to-cyan-500/5",
+    image: "",
   },
   {
     title: "Sales Dashboard",
@@ -53,6 +59,7 @@ const projects = [
     tags: ["Python", "Pandas", "Plotly"],
     category: "Data Analysis",
     color: "from-rose-500/20 to-rose-500/5",
+    image: "",
   },
   {
     title: "AI Content Generator",
@@ -60,6 +67,7 @@ const projects = [
     tags: ["React", "OpenAI", "Express"],
     category: "Generative AI",
     color: "from-amber-500/20 to-amber-500/5",
+    image: "",
   },
 ];
 
