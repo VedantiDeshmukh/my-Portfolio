@@ -1,16 +1,33 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
+
+// ✅ HOW TO ADD PROJECT IMAGES:
+// 1. Place your image in src/assets/ (e.g., src/assets/project-research-agent.png)
+// 2. Import it below:
+//    import researchAgentImg from "@/assets/project-research-agent.png";
+// 3. Set the `image` field in the project object:
+//    image: researchAgentImg,
 
 const categories = ["All Projects", "AI/ML", "Generative AI", "Agentic AI", "Web Dev", "Data Analysis"];
 
-const projects = [
+interface Project {
+  title: string;
+  desc: string;
+  tags: string[];
+  category: string;
+  color: string;
+  image?: string;
+}
+
+const projects: Project[] = [
   {
     title: "Research Agent (Agent Builder)",
     desc: "Multi-agent AI workflow for real-time research and insights.",
     tags: ["Python", "LangChain", "GPT-4"],
     category: "Agentic AI",
     color: "from-primary/20 to-primary/5",
+    image: "", // Add: import img from "@/assets/your-image.png" then set image: img
   },
   {
     title: "Github Events Notifier",
@@ -18,6 +35,7 @@ const projects = [
     tags: ["n8n", "Node.js", "GitHub API"],
     category: "Agentic AI",
     color: "from-blue-500/20 to-blue-500/5",
+    image: "",
   },
   {
     title: "CODEVO",
@@ -25,6 +43,7 @@ const projects = [
     tags: ["React", "OpenAI", "TypeScript"],
     category: "Generative AI",
     color: "from-emerald-500/20 to-emerald-500/5",
+    image: "",
   },
   {
     title: "Image Classifier",
@@ -32,6 +51,7 @@ const projects = [
     tags: ["Python", "TensorFlow", "CNN"],
     category: "AI/ML",
     color: "from-purple-500/20 to-purple-500/5",
+    image: "",
   },
   {
     title: "Sentiment Analyzer",
@@ -39,6 +59,7 @@ const projects = [
     tags: ["Python", "NLTK", "Flask"],
     category: "AI/ML",
     color: "from-orange-500/20 to-orange-500/5",
+    image: "",
   },
   {
     title: "E-Commerce Platform",
@@ -46,6 +67,7 @@ const projects = [
     tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
     category: "Web Dev",
     color: "from-cyan-500/20 to-cyan-500/5",
+    image: "",
   },
   {
     title: "Sales Dashboard",
@@ -53,6 +75,7 @@ const projects = [
     tags: ["Python", "Pandas", "Plotly"],
     category: "Data Analysis",
     color: "from-rose-500/20 to-rose-500/5",
+    image: "",
   },
   {
     title: "AI Content Generator",
@@ -60,6 +83,7 @@ const projects = [
     tags: ["React", "OpenAI", "Express"],
     category: "Generative AI",
     color: "from-amber-500/20 to-amber-500/5",
+    image: "",
   },
 ];
 
@@ -136,8 +160,15 @@ const ProjectsSection = () => {
                 transition={{ delay: i * 0.05 }}
                 className="card-glass rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0"
               >
-                <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative`}>
-                  <span className="font-heading text-xl font-bold text-foreground/20 text-center px-4">{p.title}</span>
+                <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden`}>
+                  {p.image ? (
+                    <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="flex flex-col items-center gap-2">
+                      <ImageIcon size={32} className="text-foreground/15" />
+                      <span className="font-heading text-sm font-bold text-foreground/15 text-center px-4">{p.title}</span>
+                    </div>
+                  )}
                   <span className="absolute top-3 right-3 bg-background/70 backdrop-blur-sm text-xs px-2.5 py-1 rounded-full text-muted-foreground border border-border">
                     {p.category}
                   </span>
