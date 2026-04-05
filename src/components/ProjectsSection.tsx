@@ -11,7 +11,6 @@ const projects = [
     tags: ["Python", "LangChain", "GPT-4"],
     category: "Agentic AI",
     color: "from-primary/20 to-primary/5",
-    image: "", // Add your image URL here e.g. "/projects/research-agent.png"
   },
   {
     title: "Github Events Notifier",
@@ -19,7 +18,6 @@ const projects = [
     tags: ["n8n", "Node.js", "GitHub API"],
     category: "Agentic AI",
     color: "from-blue-500/20 to-blue-500/5",
-    image: "",
   },
   {
     title: "CODEVO",
@@ -27,7 +25,6 @@ const projects = [
     tags: ["React", "OpenAI", "TypeScript"],
     category: "Generative AI",
     color: "from-emerald-500/20 to-emerald-500/5",
-    image: "",
   },
   {
     title: "Image Classifier",
@@ -35,7 +32,6 @@ const projects = [
     tags: ["Python", "TensorFlow", "CNN"],
     category: "AI/ML",
     color: "from-purple-500/20 to-purple-500/5",
-    image: "",
   },
   {
     title: "Sentiment Analyzer",
@@ -43,7 +39,6 @@ const projects = [
     tags: ["Python", "NLTK", "Flask"],
     category: "AI/ML",
     color: "from-orange-500/20 to-orange-500/5",
-    image: "",
   },
   {
     title: "E-Commerce Platform",
@@ -51,7 +46,6 @@ const projects = [
     tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
     category: "Web Dev",
     color: "from-cyan-500/20 to-cyan-500/5",
-    image: "",
   },
   {
     title: "Sales Dashboard",
@@ -59,7 +53,6 @@ const projects = [
     tags: ["Python", "Pandas", "Plotly"],
     category: "Data Analysis",
     color: "from-rose-500/20 to-rose-500/5",
-    image: "",
   },
   {
     title: "AI Content Generator",
@@ -67,7 +60,6 @@ const projects = [
     tags: ["React", "OpenAI", "Express"],
     category: "Generative AI",
     color: "from-amber-500/20 to-amber-500/5",
-    image: "",
   },
 ];
 
@@ -144,12 +136,8 @@ const ProjectsSection = () => {
                 transition={{ delay: i * 0.05 }}
                 className="card-glass rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0"
               >
-                <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden`}>
-                  {p.image ? (
-                    <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
-                  ) : (
-                    <span className="font-heading text-xl font-bold text-foreground/20 text-center px-4">{p.title}</span>
-                  )}
+                <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative`}>
+                  <span className="font-heading text-xl font-bold text-foreground/20 text-center px-4">{p.title}</span>
                   <span className="absolute top-3 right-3 bg-background/70 backdrop-blur-sm text-xs px-2.5 py-1 rounded-full text-muted-foreground border border-border">
                     {p.category}
                   </span>
