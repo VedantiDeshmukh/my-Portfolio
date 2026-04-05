@@ -160,8 +160,15 @@ const ProjectsSection = () => {
                 transition={{ delay: i * 0.05 }}
                 className="card-glass rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0"
               >
-                <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative`}>
-                  <span className="font-heading text-xl font-bold text-foreground/20 text-center px-4">{p.title}</span>
+                <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden`}>
+                  {p.image ? (
+                    <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="flex flex-col items-center gap-2">
+                      <ImageIcon size={32} className="text-foreground/15" />
+                      <span className="font-heading text-sm font-bold text-foreground/15 text-center px-4">{p.title}</span>
+                    </div>
+                  )}
                   <span className="absolute top-3 right-3 bg-background/70 backdrop-blur-sm text-xs px-2.5 py-1 rounded-full text-muted-foreground border border-border">
                     {p.category}
                   </span>
