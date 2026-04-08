@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
-import { Globe, Smartphone, Server, PenTool } from "lucide-react";
+import { Globe, Smartphone, Server, PenTool, Brain, BarChart3, Sparkles, Bot, Cloud } from "lucide-react";
 
 const services = [
   { icon: Globe, title: "Web Development", desc: "Custom websites and web apps built with modern frameworks and best practices." },
   { icon: Smartphone, title: "Responsive Design", desc: "Mobile-first, pixel-perfect designs that look great on every device." },
   { icon: Server, title: "Backend & APIs", desc: "Scalable server-side solutions, database design, and API development." },
   { icon: PenTool, title: "UI/UX Design", desc: "User-centered design with intuitive interfaces and seamless experiences." },
+  { icon: Brain, title: "AI/ML", desc: "Machine learning models, predictive analytics, and intelligent automation solutions." },
+  { icon: BarChart3, title: "Data Analytics", desc: "Data-driven insights, visualization dashboards, and business intelligence." },
+  { icon: Sparkles, title: "Generative AI", desc: "LLM-powered applications, content generation, and creative AI solutions." },
+  { icon: Bot, title: "Agentic AI", desc: "Autonomous AI agents, workflow automation, and multi-agent systems." },
+  { icon: Cloud, title: "Cloud", desc: "Cloud architecture, deployment, and scalable infrastructure on AWS, Azure & GCP." },
 ];
 
 const ServicesSection = () => {
