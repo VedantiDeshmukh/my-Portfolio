@@ -59,45 +59,28 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div
-              onClick={() => fileInputRef.current?.click()}
-              className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 cursor-pointer group"
-            >
+            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
               {/* Blended glow behind photo */}
               <div className="absolute inset-0 rounded-full opacity-40 blur-2xl" style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.5), transparent 70%)" }} />
               
               {profilePhoto ? (
                 <div className="relative w-full h-full rounded-full overflow-hidden">
                   <img src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover" />
-                  {/* Gradient blend edges */}
                   <div className="absolute inset-0 rounded-full" style={{
                     background: "radial-gradient(circle, transparent 55%, hsl(var(--background)) 100%)"
                   }} />
                 </div>
               ) : (
                 <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-primary/20">
-                  <div className="w-full h-full bg-muted/20 flex flex-col items-center justify-center gap-3 group-hover:bg-muted/40 transition-colors">
-                    <Camera size={32} className="text-muted-foreground group-hover:text-primary transition-colors" />
-                    <span className="text-xs text-muted-foreground font-heading tracking-wider uppercase">Upload Photo</span>
+                  <div className="w-full h-full bg-muted/20 flex flex-col items-center justify-center gap-3">
+                    <User size={48} className="text-muted-foreground" />
+                    <span className="text-xs text-muted-foreground font-heading tracking-wider uppercase">Add photo in code</span>
                   </div>
-                  {/* Gradient blend on empty state too */}
                   <div className="absolute inset-0 rounded-full pointer-events-none" style={{
                     background: "radial-gradient(circle, transparent 60%, hsl(var(--background)) 100%)"
                   }} />
                 </div>
               )}
-              {profilePhoto && (
-                <div className="absolute inset-0 rounded-full bg-background/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Camera size={28} className="text-primary" />
-                </div>
-              )}
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/*"
-                onChange={handlePhotoUpload}
-                className="hidden"
-              />
             </div>
           </motion.div>
         </div>
