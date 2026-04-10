@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter, User } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Twitter, Instagram, Mail, User } from "lucide-react";
 
 // ✅ HOW TO SET YOUR PROFILE PHOTO:
 // 1. Place your photo in src/assets/ (e.g., src/assets/profile-photo.jpg)
@@ -49,6 +49,8 @@ const HeroSection = () => {
               <a href="#" className="hover:text-primary transition-colors"><Github size={20} /></a>
               <a href="#" className="hover:text-primary transition-colors"><Linkedin size={20} /></a>
               <a href="#" className="hover:text-primary transition-colors"><Twitter size={20} /></a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram size={20} /></a>
+              <a href="mailto:hello@example.com" className="hover:text-primary transition-colors"><Mail size={20} /></a>
             </div>
           </motion.div>
 
