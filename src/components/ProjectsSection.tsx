@@ -158,13 +158,14 @@ const ProjectsSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="card-glass rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="card-glass rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0 transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(var(--primary-rgb,59,130,246),0.15)] cursor-pointer"
               >
                 <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden`}>
                   {p.image ? (
-                    <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+                    <img src={p.image} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
                   ) : (
-                    <div className="flex flex-col items-center gap-2">
+                    <div className="flex flex-col items-center gap-2 transition-transform duration-500 group-hover:scale-110">
                       <ImageIcon size={32} className="text-foreground/15" />
                       <span className="font-heading text-sm font-bold text-foreground/15 text-center px-4">{p.title}</span>
                     </div>
@@ -172,20 +173,22 @@ const ProjectsSection = () => {
                   <span className="absolute top-3 right-3 bg-background/70 backdrop-blur-sm text-xs px-2.5 py-1 rounded-full text-muted-foreground border border-border">
                     {p.category}
                   </span>
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-lg font-semibold text-foreground mb-2">{p.title}</h3>
+                  <h3 className="font-heading text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">{p.title}</h3>
                   <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {p.tags.map((t) => (
-                      <span key={t} className="bg-secondary text-secondary-foreground text-xs px-2.5 py-1 rounded-full">{t}</span>
+                      <span key={t} className="bg-secondary text-secondary-foreground text-xs px-2.5 py-1 rounded-full group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">{t}</span>
                     ))}
                   </div>
                   <div className="flex gap-4 text-muted-foreground">
-                    <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm">
+                    <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm group-hover:translate-x-0.5 transition-transform duration-300">
                       <Github size={16} /> Code
                     </a>
-                    <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm">
+                    <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm group-hover:translate-x-0.5 transition-transform duration-300">
                       <ExternalLink size={16} /> Live
                     </a>
                   </div>
