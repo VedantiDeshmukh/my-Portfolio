@@ -84,6 +84,10 @@ const HeroSection = () => {
                 </div>
               )}
             </div>
+            <div className="flex items-center justify-center gap-4 mt-5 text-muted-foreground">
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram size={20} /></a>
+              <a href="mailto:hello@example.com" className="hover:text-primary transition-colors"><Mail size={20} /></a>
+            </div>
           </motion.div>
         </div>
       </div>
