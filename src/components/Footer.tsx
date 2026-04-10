@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Instagram, Mail } from "lucide-react";
 
 const Footer = () => (
   <footer className="border-t border-border/50 py-8 px-4 md:px-8">
@@ -10,6 +10,8 @@ const Footer = () => (
         <a href="#" className="hover:text-primary transition-colors"><Github size={18} /></a>
         <a href="#" className="hover:text-primary transition-colors"><Linkedin size={18} /></a>
         <a href="#" className="hover:text-primary transition-colors"><Twitter size={18} /></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
+        <a href="mailto:hello@example.com" className="hover:text-primary transition-colors"><Mail size={18} /></a>
       </div>
     </div>
   </footer>
