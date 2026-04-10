@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send, Instagram } from "lucide-react";
 import { useState } from "react";
 
 const ContactSection = () => {
@@ -44,6 +44,14 @@ const ContactSection = () => {
                 <MapPin size={18} className="text-primary" />
                 <span>San Francisco, CA</span>
               </div>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <Instagram size={18} className="text-primary" />
+                <span>Instagram</span>
+              </a>
+              <a href="mailto:hello@example.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <Mail size={18} className="text-primary" />
+                <span>Gmail</span>
+              </a>
             </div>
           </motion.div>
 
