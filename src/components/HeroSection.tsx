@@ -37,20 +37,20 @@ const HeroSection = () => {
             </p>
 
             <div className="flex items-center gap-6 mb-16">
-              <a href="#contact" className="bg-primary text-primary-foreground font-heading font-medium px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
+              <a href="#contact" className="click-scale bg-primary text-primary-foreground font-heading font-medium px-8 py-3 rounded-lg hover:brightness-110 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.4)] transition-all duration-300">
                 Get in Touch
               </a>
-              <a href="#projects" className="border border-border text-foreground font-heading font-medium px-8 py-3 rounded-lg hover:border-primary/50 transition-colors">
+              <a href="#projects" className="click-scale border border-border text-foreground font-heading font-medium px-8 py-3 rounded-lg hover:border-primary/50 hover:bg-primary/5 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.1)] transition-all duration-300">
                 View Work
               </a>
             </div>
 
             <div className="flex items-center gap-5 text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors"><Github size={20} /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Twitter size={20} /></a>
-              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram size={20} /></a>
-              <a href="mailto:hello@example.com" className="hover:text-primary transition-colors"><Mail size={20} /></a>
+              <a href="#" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Github size={20} /></a>
+              <a href="#" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Linkedin size={20} /></a>
+              <a href="#" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Twitter size={20} /></a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Instagram size={20} /></a>
+              <a href="mailto:hello@example.com" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Mail size={20} /></a>
             </div>
           </motion.div>
 

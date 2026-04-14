@@ -36,12 +36,14 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="card-glass rounded-xl p-8 group hover:border-primary/30 transition-colors"
+              whileHover={{ y: -4 }}
+              whileTap={{ scale: 0.98 }}
+              className="card-glass card-hover-glow rounded-xl p-8 group cursor-pointer"
             >
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-5 group-hover:glow-accent transition-shadow">
+              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center text-primary mb-5 group-hover:bg-primary/20 group-hover:shadow-[0_0_20px_hsl(var(--primary)/0.2)] transition-all duration-300">
                 <s.icon size={24} />
               </div>
-              <h3 className="font-heading text-xl font-semibold text-foreground mb-3">{s.title}</h3>
+              <h3 className="font-heading text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">{s.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}

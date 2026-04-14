@@ -26,19 +26,19 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="flex justify-center gap-8 flex-wrap"
         >
-          <a href={`mailto:${email}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
+          <a href={`mailto:${email}`} className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <Mail size={22} className="text-primary" />
             <span>Gmail</span>
           </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <Instagram size={22} className="text-primary" />
             <span>Instagram</span>
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <Github size={22} className="text-primary" />
             <span>GitHub</span>
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <Linkedin size={22} className="text-primary" />
             <span>LinkedIn</span>
           </a>

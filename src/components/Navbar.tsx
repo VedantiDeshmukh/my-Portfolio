@@ -29,7 +29,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
               {link.label}
             </a>
@@ -41,7 +41,7 @@ const Navbar = () => {
         <div className="flex md:hidden items-center gap-2">
           <ThemeToggle />
           <button
-            className="text-foreground"
+            className="click-scale text-foreground p-1.5 rounded-lg hover:bg-primary/10 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -64,7 +64,7 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 px-3 py-2 rounded-lg transition-all"
                 >
                   {link.label}
                 </a>

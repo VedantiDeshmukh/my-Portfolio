@@ -27,7 +27,7 @@ const projects: Project[] = [
     tags: ["Python", "LangChain", "GPT-4"],
     category: "Agentic AI",
     color: "from-primary/20 to-primary/5",
-    image: "", // Add: import img from "@/assets/your-image.png" then set image: img
+    image: "",
   },
   {
     title: "Github Events Notifier",
@@ -119,10 +119,10 @@ const ProjectsSection = () => {
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${
+              className={`click-scale px-5 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${
                 active === cat
-                  ? "bg-primary text-primary-foreground border-primary"
-                  : "bg-transparent text-muted-foreground border-border hover:border-primary/50 hover:text-foreground"
+                  ? "bg-primary text-primary-foreground border-primary shadow-[0_2px_12px_hsl(var(--primary)/0.3)]"
+                  : "bg-transparent text-muted-foreground border-border hover:border-primary/50 hover:text-foreground hover:bg-primary/5"
               }`}
             >
               {cat}
@@ -134,13 +134,13 @@ const ProjectsSection = () => {
         <div className="relative">
           <button
             onClick={() => scroll("left")}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-secondary transition-colors hidden md:flex"
+            className="click-scale absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-primary/10 hover:border-primary/30 transition-all hidden md:flex"
           >
             <ChevronLeft size={20} className="text-foreground" />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-secondary transition-colors hidden md:flex"
+            className="click-scale absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm border border-border rounded-full p-2 hover:bg-primary/10 hover:border-primary/30 transition-all hidden md:flex"
           >
             <ChevronRight size={20} className="text-foreground" />
           </button>
@@ -159,7 +159,8 @@ const ProjectsSection = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="card-glass rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0 transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(var(--primary-rgb,59,130,246),0.15)] cursor-pointer"
+                whileTap={{ scale: 0.98 }}
+                className="card-glass card-hover-glow rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0 cursor-pointer"
               >
                 <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden`}>
                   {p.image ? (
@@ -185,10 +186,10 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                   <div className="flex gap-4 text-muted-foreground">
-                    <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm group-hover:translate-x-0.5 transition-transform duration-300">
+                    <a href="#" className="click-scale hover:text-primary transition-all flex items-center gap-1 text-sm group-hover:translate-x-0.5">
                       <Github size={16} /> Code
                     </a>
-                    <a href="#" className="hover:text-primary transition-colors flex items-center gap-1 text-sm group-hover:translate-x-0.5 transition-transform duration-300">
+                    <a href="#" className="click-scale hover:text-primary transition-all flex items-center gap-1 text-sm group-hover:translate-x-0.5">
                       <ExternalLink size={16} /> Live
                     </a>
                   </div>
