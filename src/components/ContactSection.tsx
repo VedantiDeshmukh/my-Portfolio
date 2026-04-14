@@ -6,7 +6,7 @@ const ContactSection = () => {
   const email = "hello@example.com";
 
   return (
-    <section id="contact" className="section-padding">
+    <section id="contact" className="section-padding pb-12">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

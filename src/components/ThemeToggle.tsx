@@ -23,7 +23,7 @@ const ThemeToggle = () => {
       className="p-2 rounded-lg border border-border/50 bg-secondary/50 hover:bg-secondary transition-colors"
       aria-label="Toggle theme"
     >
-      {isDark ? <Sun size={18} className="text-primary" /> : <Moon size={18} className="text-primary" />}
+      {isDark ? <Moon size={18} className="text-primary" /> : <Sun size={18} className="text-primary" />}
     </button>
   );
 };
