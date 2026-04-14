@@ -7,11 +7,11 @@ const Footer = () => (
         © 2026 Portfolio. All rights reserved.
       </p>
       <div className="flex gap-4 text-muted-foreground">
-        <a href="#" className="hover:text-primary transition-colors"><Github size={18} /></a>
-        <a href="#" className="hover:text-primary transition-colors"><Linkedin size={18} /></a>
-        <a href="#" className="hover:text-primary transition-colors"><Twitter size={18} /></a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors"><Instagram size={18} /></a>
-        <a href="mailto:hello@example.com" className="hover:text-primary transition-colors"><Mail size={18} /></a>
+        <a href="#" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Github size={18} /></a>
+        <a href="#" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Linkedin size={18} /></a>
+        <a href="#" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Twitter size={18} /></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Instagram size={18} /></a>
+        <a href="mailto:hello@example.com" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Mail size={18} /></a>
       </div>
     </div>
   </footer>
