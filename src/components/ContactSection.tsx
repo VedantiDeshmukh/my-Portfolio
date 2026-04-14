@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Instagram } from "lucide-react";
+import { Mail, Instagram, Github, Linkedin } from "lucide-react";
 
 const ContactSection = () => {
   // TODO: Replace with your actual email
@@ -24,15 +24,23 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex justify-center gap-8"
+          className="flex justify-center gap-8 flex-wrap"
         >
+          <a href={`mailto:${email}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
+            <Mail size={22} className="text-primary" />
+            <span>Gmail</span>
+          </a>
           <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
             <Instagram size={22} className="text-primary" />
             <span>Instagram</span>
           </a>
-          <a href={`mailto:${email}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
-            <Mail size={22} className="text-primary" />
-            <span>Gmail</span>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
+            <Github size={22} className="text-primary" />
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors text-lg">
+            <Linkedin size={22} className="text-primary" />
+            <span>LinkedIn</span>
           </a>
         </motion.div>
       </div>
