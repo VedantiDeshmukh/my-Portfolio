@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Instagram, Github, Linkedin } from "lucide-react";
 
 const ContactSection = () => {
-  // TODO: Replace with your actual email
-  const email = "hello@example.com";
+  const email = "deshmukhvedanti2002@gmail.com";
 
   return (
     <section id="contact" className="section-padding pb-12">
@@ -30,15 +29,15 @@ const ContactSection = () => {
             <Mail size={22} className="text-primary" />
             <span>Gmail</span>
           </a>
-          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
+          <a href="https://www.instagram.com/vedantideshmukh._?igsh=dGoycG5uZm93NXE4" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <Instagram size={22} className="text-primary" />
             <span>Instagram</span>
           </a>
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
+          <a href="https://github.com/VedantiDeshmukh" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <Github size={22} className="text-primary" />
             <span>GitHub</span>
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
+          <a href="https://www.linkedin.com/in/vedanti-deshmukh-3b97b5212" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <Linkedin size={22} className="text-primary" />
             <span>LinkedIn</span>
           </a>
