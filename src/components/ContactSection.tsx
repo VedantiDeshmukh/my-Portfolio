@@ -29,7 +29,7 @@ const ContactSection = () => {
             <Mail size={22} className="text-primary" />
             <span>Gmail</span>
           </a>
-          <a href="https://www.instagram.com/vedantideshmukh._?igsh=dGoycG5uZm93NXE4" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
+          <a href="https://www.instagram.com/vedantideshmukh._/" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <Instagram size={22} className="text-primary" />
             <span>Instagram</span>
           </a>
