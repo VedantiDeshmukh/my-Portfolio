@@ -10,7 +10,7 @@ const Footer = () => (
         <a href="https://github.com/VedantiDeshmukh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Github size={18} /></a>
         <a href="https://www.linkedin.com/in/vedanti-deshmukh-3b97b5212" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Linkedin size={18} /></a>
         <a href="https://x.com/VedantiDeshmuk3" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Twitter size={18} /></a>
-        <a href="https://www.instagram.com/vedantideshmukh._?igsh=dGoycG5uZm93NXE4" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Instagram size={18} /></a>
+        <a href="https://www.instagram.com/vedantideshmukh._/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Instagram size={18} /></a>
         <a href="mailto:deshmukhvedanti2002@gmail.com" aria-label="Email" className="click-scale hover:text-primary transition-colors p-1.5 rounded-lg hover:bg-primary/10"><Mail size={18} /></a>
       </div>
     </div>
