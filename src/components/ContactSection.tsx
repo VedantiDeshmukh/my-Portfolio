@@ -14,9 +14,11 @@ const ContactSection = () => {
           className="text-center"
         >
           <p className="text-primary font-heading text-sm tracking-[0.3em] uppercase mb-2">Contact</p>
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-12">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
             Let's <span className="heading-gradient">connect</span>
           </h2>
+          <p className="text-xl md:text-2xl font-heading font-semibold mb-2">Vedanti Deshmukh</p>
+          <p className="text-base md:text-lg text-muted-foreground mb-12 select-all break-all">Deshmukhvedanti2002@gmail.com</p>
         </motion.div>
 
         <motion.div
