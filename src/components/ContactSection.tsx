@@ -18,7 +18,7 @@ const ContactSection = () => {
             Let's <span className="heading-gradient">connect</span>
           </h2>
           <p className="text-xl md:text-2xl font-heading font-semibold mb-2">Vedanti Deshmukh</p>
-          <p className="text-base md:text-lg text-muted-foreground mb-12 select-all break-all">Deshmukhvedanti2002@gmail.com</p>
+          <p className="text-base md:text-lg text-muted-foreground mb-12 select-all break-all">deshmukhvedanti2002@gmail.com</p>
         </motion.div>
 
         <motion.div
