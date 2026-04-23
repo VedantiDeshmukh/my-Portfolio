@@ -46,6 +46,14 @@ const skills = [
   { name: "AstraDB", icon: Database, color: "text-[hsl(15,75%,55%)]" },
   { name: "FastAPI", icon: Server, color: "text-[hsl(170,70%,55%)]" },
   { name: "Quantum", icon: Atom, color: "text-[hsl(190,80%,60%)]" },
+  { name: "AWS", icon: Cloud, color: "text-[hsl(35,85%,55%)]" },
+  { name: "Azure", icon: Cloud, color: "text-[hsl(210,80%,60%)]" },
+  { name: "GCP", icon: Cloud, color: "text-[hsl(0,70%,60%)]" },
+  { name: "Kubernetes", icon: Boxes, color: "text-[hsl(220,70%,60%)]" },
+  { name: "Terraform", icon: Layers, color: "text-[hsl(270,70%,65%)]" },
+  { name: "Lambda", icon: Zap, color: "text-[hsl(35,85%,55%)]" },
+  { name: "S3", icon: Database, color: "text-[hsl(145,60%,50%)]" },
+  { name: "CI/CD", icon: Workflow, color: "text-[hsl(170,70%,55%)]" },
 ];
 
 const SkillsSection = () => {
