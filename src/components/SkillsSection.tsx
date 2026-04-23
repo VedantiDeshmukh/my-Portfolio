@@ -4,7 +4,7 @@ import {
   Cpu, Layers, Terminal, Cloud, Figma, FileJson,
   Bot, Workflow, Server, Braces, PenTool, Sparkles,
   LineChart, Table2, Boxes, Container, Zap, Eye,
-  Network, Wrench, FlaskConical, Palette, LayoutGrid, Search
+  Network, Wrench, FlaskConical, Palette, LayoutGrid, Search, Atom
 } from "lucide-react";
 
 const skills = [
@@ -45,6 +45,7 @@ const skills = [
   { name: "Docker", icon: Container, color: "text-[hsl(210,70%,60%)]" },
   { name: "AstraDB", icon: Database, color: "text-[hsl(15,75%,55%)]" },
   { name: "FastAPI", icon: Server, color: "text-[hsl(170,70%,55%)]" },
+  { name: "Quantum", icon: Atom, color: "text-[hsl(190,80%,60%)]" },
 ];
 
 const SkillsSection = () => {
