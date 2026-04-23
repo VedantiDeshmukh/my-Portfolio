@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Globe, Server, Brain, BarChart3, Sparkles, Bot, Cloud, Atom } from "lucide-react";
 
 const services = [
-  { icon: Globe, title: "Web Development", desc: "Custom websites and web apps built with modern frameworks and best practices." },
+  { icon: Globe, title: "Web Development", desc: "Web apps built with modern frameworks and best practices." },
   { icon: Server, title: "Backend & APIs", desc: "Scalable server-side solutions, database design, and API development." },
   { icon: Brain, title: "AI/ML", desc: "Machine learning models, predictive analytics, and intelligent automation solutions." },
   { icon: BarChart3, title: "Data Analytics", desc: "Data-driven insights, visualization dashboards, and business intelligence." },
   { icon: Sparkles, title: "Generative AI", desc: "LLM-powered applications, content generation, and creative AI solutions." },
   { icon: Bot, title: "Agentic AI", desc: "Autonomous AI agents, workflow automation, and multi-agent systems." },
   { icon: Cloud, title: "Cloud", desc: "Cloud architecture, deployment, and scalable infrastructure on AWS, Azure & GCP." },
-  { icon: Atom, title: "Quantum Computing", desc: "Quantum algorithms, qubit-based computation, and next-gen problem solving." },
+  { icon: Atom, title: "Quantum Computing", desc: "Quantum algorithms and next-gen problem solving." },
 ];
 
 const ServicesSection = () => {
