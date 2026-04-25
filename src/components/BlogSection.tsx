@@ -87,11 +87,11 @@ const BlogSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="card-glass rounded-xl p-6 group hover:border-primary/30 transition-colors block min-w-[300px] md:min-w-[360px] snap-start flex-shrink-0"
+                className="card-glass rounded-xl p-6 group hover:border-primary/30 transition-colors block w-[300px] md:w-[360px] snap-start flex-shrink-0"
               >
                 <span className="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full font-medium">{post.tag}</span>
                 <h3 className="font-heading text-lg font-semibold text-foreground mt-4 mb-3 group-hover:text-primary transition-colors flex items-start gap-2">
-                  {post.title}
+                  <span className="line-clamp-2 break-words">{post.title}</span>
                   <ArrowUpRight size={18} className="shrink-0 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </h3>
                 <div className="flex items-center gap-3 text-muted-foreground text-sm">
