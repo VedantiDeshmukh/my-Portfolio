@@ -5,12 +5,12 @@ import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight } from "lucide-react"
 const blogCategories = ["All", "AI/ML", "Web Dev", "DevOps", "Career"];
 
 const posts = [
-  { title: "Building Scalable React Applications", date: "Mar 15, 2026", tag: "Web Dev", readTime: "5 min" },
-  { title: "TypeScript Best Practices in 2026", date: "Feb 28, 2026", tag: "Web Dev", readTime: "8 min" },
-  { title: "The Art of Clean Code Architecture", date: "Jan 20, 2026", tag: "DevOps", readTime: "6 min" },
-  { title: "Introduction to LLMs and Prompt Engineering", date: "Mar 10, 2026", tag: "AI/ML", readTime: "7 min" },
-  { title: "Agentic AI: The Future of Automation", date: "Mar 5, 2026", tag: "AI/ML", readTime: "9 min" },
-  { title: "Navigating Your First Tech Job", date: "Feb 10, 2026", tag: "Career", readTime: "4 min" },
+  { title: "Building Scalable React Applications", date: "Mar 15, 2026", tag: "Web Dev", readTime: "5 min", url: "#" },
+  { title: "TypeScript Best Practices in 2026", date: "Feb 28, 2026", tag: "Web Dev", readTime: "8 min", url: "#" },
+  { title: "The Art of Clean Code Architecture", date: "Jan 20, 2026", tag: "DevOps", readTime: "6 min", url: "#" },
+  { title: "Introduction to LLMs and Prompt Engineering", date: "Mar 10, 2026", tag: "AI/ML", readTime: "7 min", url: "#" },
+  { title: "Agentic AI: The Future of Automation", date: "Mar 5, 2026", tag: "AI/ML", readTime: "9 min", url: "#" },
+  { title: "Navigating Your First Tech Job", date: "Feb 10, 2026", tag: "Career", readTime: "4 min", url: "#" },
 ];
 
 const BlogSection = () => {
@@ -80,7 +80,9 @@ const BlogSection = () => {
             {filtered.map((post, i) => (
               <motion.a
                 key={post.title}
-                href="#"
+                href={post.url}
+                target={post.url.startsWith("http") ? "_blank" : undefined}
+                rel={post.url.startsWith("http") ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
