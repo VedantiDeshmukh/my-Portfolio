@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 
-const blogCategories = ["All", "AI/ML", "Web Dev", "DevOps", "Career"];
+const blogCategories = ["All", "AI/ML", "Quantum Computing", "DevOps", "Career"];
 
 const posts = [
   { title: "Forget Highlighting: The “Close the Book” Rule for Mastering Hard Subjects", date: "April 15, 2026", tag: "Career", readTime: "5 min", url: "https://medium.com/@vedantideshmukh871/forget-highlighting-the-close-the-book-rule-for-mastering-hard-subjects-860b857b386e" },
