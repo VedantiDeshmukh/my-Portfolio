@@ -1,10 +1,22 @@
 import { motion } from "framer-motion";
-import { Code, Palette, Zap } from "lucide-react";
+import { BrainCircuit, BarChart3, Atom } from "lucide-react";
 
 const highlights = [
-  { icon: Code, label: "Clean Code", desc: "Writing maintainable, scalable solutions" },
-  { icon: Palette, label: "Design Eye", desc: "Pixel-perfect UI with great UX" },
-  { icon: Zap, label: "Performance", desc: "Optimized for speed and efficiency" },
+  {
+    icon: BrainCircuit,
+    label: "Intelligent Systems",
+    desc: "Architecting Generative AI and Agentic workflows for autonomous solutions.",
+  },
+  {
+    icon: BarChart3,
+    label: "Data-Driven Insights",
+    desc: "Building scalable analytics to turn complex data into actionable intelligence.",
+  },
+  {
+    icon: Atom,
+    label: "Future-Ready Tech",
+    desc: "Optimizing performance at the intersection of Python, Java, and Quantum Computing.",
+  },
 ];
 
 const AboutSection = () => {
