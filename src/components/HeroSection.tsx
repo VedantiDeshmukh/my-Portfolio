@@ -33,7 +33,7 @@ const HeroSection = () => {
               <span className="heading-gradient">Vedanti Deshmukh</span>
             </h1>
             <p className="text-muted-foreground text-lg md:text-xl max-w-xl mb-10 leading-relaxed">
-              Computer Science professional dedicated to Building the future with Gen AI 🤖, Agentic AI 🧠, and Quantum Computing ⚛️.
+              Computer Science professional dedicated to Building the future with Gen AI , Agentic AI , and Quantum Computing .
             </p>
 
             <div className="flex items-center gap-6 mb-16">
