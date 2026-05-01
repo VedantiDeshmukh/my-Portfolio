@@ -31,7 +31,7 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-muted-foreground leading-relaxed mb-4">
-              I'm a full-stack developer with 5+ years of experience building web applications. I specialize in React, TypeScript, and Node.js, with a deep passion for creating intuitive user interfaces.
+              I am a Computer Science & Engineering professional dedicated to building the next generation of intelligent systems. My work focuses on the intersection of Generative AI, Agentic workflows, and Data Analytics, with a deep curiosity for the future of Quantum Computing.
             </p>
             <p className="text-muted-foreground leading-relaxed">
               When I'm not coding, you'll find me exploring new technologies, contributing to open source, or sharing knowledge through blog posts and mentoring.
