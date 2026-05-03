@@ -5,6 +5,7 @@ import {
   Bot, Workflow, Server, Braces, PenTool, Sparkles,
   LineChart, Table2, Boxes, Container, Zap, Eye,
   Network, Wrench, FlaskConical, Palette, LayoutGrid, Search, Atom
+  , Smartphone, Coffee, Bug, Hammer, Bell, Package
 } from "lucide-react";
 
 const skills = [
@@ -54,6 +55,18 @@ const skills = [
   { name: "Lambda", icon: Zap, color: "text-[hsl(35,85%,55%)]" },
   { name: "S3", icon: Database, color: "text-[hsl(145,60%,50%)]" },
   { name: "CI/CD", icon: Workflow, color: "text-[hsl(170,70%,55%)]" },
+  { name: "Android SDK", icon: Smartphone, color: "text-[hsl(145,60%,50%)]" },
+  { name: "Kotlin", icon: Code, color: "text-[hsl(270,70%,65%)]" },
+  { name: "Java", icon: Coffee, color: "text-[hsl(15,75%,55%)]" },
+  { name: "Jetpack Compose", icon: Layers, color: "text-[hsl(170,70%,55%)]" },
+  { name: "Android Studio", icon: Hammer, color: "text-[hsl(145,60%,45%)]" },
+  { name: "Gradle", icon: Package, color: "text-[hsl(200,70%,55%)]" },
+  { name: "Firebase", icon: Zap, color: "text-[hsl(35,85%,55%)]" },
+  { name: "Room DB", icon: Database, color: "text-[hsl(210,70%,60%)]" },
+  { name: "Retrofit", icon: Network, color: "text-[hsl(0,65%,55%)]" },
+  { name: "Material UI", icon: Palette, color: "text-[hsl(280,60%,65%)]" },
+  { name: "Push Notifs", icon: Bell, color: "text-[hsl(45,85%,55%)]" },
+  { name: "Espresso", icon: Bug, color: "text-[hsl(25,80%,55%)]" },
 ];
 
 const SkillsSection = () => {
