@@ -40,8 +40,8 @@ const projects: Project[] = [
     image: "",
   },
   {
-    title: "Sentiment Analyzer",
-    desc: "NLP-based sentiment analysis tool for social media data.",
+    title: "Salary Predictor",
+    desc: "Employee Salary Prediction System using Machine Learning.",
     tags: ["Python", "NLTK", "Flask"],
     category: "AI/ML",
     color: "from-orange-500/20 to-orange-500/5",
