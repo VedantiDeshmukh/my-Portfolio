@@ -38,9 +38,9 @@ const projects: Project[] = [
     image: "",
   },
   {
-    title: "CODEVO",
-    desc: "AI tool for automated code review and generation.",
-    tags: ["React", "OpenAI", "TypeScript"],
+    title: "LearnX AI",
+    desc: "Intellegent Educational Agen for Adaptive Learning.",
+    tags: ["python", "OpenAI", "LangChain", ],
     category: "Generative AI",
     color: "from-emerald-500/20 to-emerald-500/5",
     image: "",
