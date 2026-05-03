@@ -9,7 +9,7 @@ import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "luci
 // 3. Set the `image` field in the project object:
 //    image: researchAgentImg,
 
-const categories = ["All Projects", "AI/ML", "Generative AI", "Agentic AI", "Web Dev", "Data Analysis"];
+const categories = ["All Projects", "AI/ML", "Generative AI", "Agentic AI", "Web Dev", "Data Analysis", "Android Development", "Blockchain"];
 
 interface Project {
   title: string;
@@ -69,6 +69,38 @@ const projects: Project[] = [
     tags: ["React", "OpenAI", "Express"],
     category: "Generative AI",
     color: "from-amber-500/20 to-amber-500/5",
+    image: "",
+  },
+  {
+    title: "FitTrack Mobile",
+    desc: "Native Android fitness tracking app with workout plans and progress analytics.",
+    tags: ["Kotlin", "Jetpack Compose", "Room"],
+    category: "Android Development",
+    color: "from-green-500/20 to-green-500/5",
+    image: "",
+  },
+  {
+    title: "ChatNow Android",
+    desc: "Real-time messaging app with push notifications and media sharing.",
+    tags: ["Java", "Firebase", "Android SDK"],
+    category: "Android Development",
+    color: "from-teal-500/20 to-teal-500/5",
+    image: "",
+  },
+  {
+    title: "DeFi Vault",
+    desc: "Decentralized finance platform for staking and yield farming on Ethereum.",
+    tags: ["Solidity", "Web3.js", "React"],
+    category: "Blockchain",
+    color: "from-indigo-500/20 to-indigo-500/5",
+    image: "",
+  },
+  {
+    title: "NFT Marketplace",
+    desc: "Mint, buy, and sell NFTs with smart contract-powered auctions.",
+    tags: ["Solidity", "Hardhat", "IPFS"],
+    category: "Blockchain",
+    color: "from-fuchsia-500/20 to-fuchsia-500/5",
     image: "",
   },
 ];
