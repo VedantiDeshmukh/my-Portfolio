@@ -21,22 +21,8 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    title: "Research Agent (Agent Builder)",
-    desc: "Multi-agent AI workflow for real-time research and insights.",
-    tags: ["Python", "LangChain", "GPT-4"],
-    category: "Agentic AI",
-    color: "from-primary/20 to-primary/5",
-    image: "",
-  },
-  {
-    title: "Github Events Notifier",
-    desc: "Turns GitHub events into intelligent AI-powered notifications.",
-    tags: ["n8n", "Node.js", "GitHub API"],
-    category: "Agentic AI",
-    color: "from-blue-500/20 to-blue-500/5",
-    image: "",
-  },
+  
+  
   {
     title: "LearnX AI",
     desc: "Intellegent Educational Agen for Adaptive Learning.",
@@ -46,9 +32,9 @@ const projects: Project[] = [
     image: "",
   },
   {
-    title: "Image Classifier",
-    desc: "Deep learning model for multi-class image classification.",
-    tags: ["Python", "TensorFlow", "CNN"],
+    title: "PhishShield",
+    desc: :"AI Powered Phishing Detection System.",
+    tags: ["Python", "Classifcation", "Flask"],
     category: "AI/ML",
     color: "from-purple-500/20 to-purple-500/5",
     image: "",
