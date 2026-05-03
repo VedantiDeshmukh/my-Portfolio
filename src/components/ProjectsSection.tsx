@@ -33,7 +33,7 @@ const projects: Project[] = [
   },
   {
     title: "PhishShield",
-    desc: :"AI Powered Phishing Detection System.",
+    desc: "AI Powered Phishing Detection System.",
     tags: ["Python", "Classifcation", "Flask"],
     category: "AI/ML",
     color: "from-purple-500/20 to-purple-500/5",
