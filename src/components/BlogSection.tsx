@@ -6,11 +6,7 @@ const blogCategories = ["All", "AI/ML", "Quantum Computing", "DevOps", "Career"]
 
 const posts = [
   { title: "Forget Highlighting: The “Close the Book” Rule for Mastering Hard Subjects", date: "April 15, 2026", tag: "Career", readTime: "5 min", url: "https://medium.com/@vedantideshmukh871/forget-highlighting-the-close-the-book-rule-for-mastering-hard-subjects-860b857b386e" },
-  { title: "TypeScript Best Practices in 2026", date: "Feb 28, 2026", tag: "Web Dev", readTime: "8 min", url: "#" },
-  { title: "The Art of Clean Code Architecture", date: "Jan 20, 2026", tag: "DevOps", readTime: "6 min", url: "#" },
-  { title: "Introduction to LLMs and Prompt Engineering", date: "Mar 10, 2026", tag: "AI/ML", readTime: "7 min", url: "#" },
-  { title: "Agentic AI: The Future of Automation", date: "Mar 5, 2026", tag: "AI/ML", readTime: "9 min", url: "#" },
-  { title: "Navigating Your First Tech Job", date: "Feb 10, 2026", tag: "Career", readTime: "4 min", url: "#" },
+  
 ];
 
 const BlogSection = () => {
