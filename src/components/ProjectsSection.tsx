@@ -95,14 +95,7 @@ const projects: Project[] = [
     color: "from-indigo-500/20 to-indigo-500/5",
     image: "",
   },
-  {
-    title: "NFT Marketplace",
-    desc: "Mint, buy, and sell NFTs with smart contract-powered auctions.",
-    tags: ["Solidity", "Hardhat", "IPFS"],
-    category: "Blockchain",
-    color: "from-fuchsia-500/20 to-fuchsia-500/5",
-    image: "",
-  },
+  
 ];
 
 const ProjectsSection = () => {
