@@ -18,6 +18,8 @@ interface Project {
   category: string;
   color: string;
   image?: string;
+  github?: string;
+  live?: string;
 }
 
 const projects: Project[] = [
@@ -30,6 +32,8 @@ const projects: Project[] = [
     category: "Generative AI",
     color: "from-emerald-500/20 to-emerald-500/5",
     image: "",
+    github: "",
+    live: "",
   },
   {
     title: "PhishShield",
