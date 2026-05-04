@@ -80,7 +80,7 @@ const projects: Project[] = [
     image: "",
   },
   {
-    title: "ChatNow Android",
+    title: "Chatter Up",
     desc: "Real-time messaging app with push notifications and media sharing.",
     tags: ["Java", "Firebase", "Android SDK"],
     category: "Android Development",
