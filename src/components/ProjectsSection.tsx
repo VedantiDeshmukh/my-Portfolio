@@ -201,12 +201,26 @@ const ProjectsSection = () => {
                     ))}
                   </div>
                   <div className="flex gap-4 text-muted-foreground">
-                    <a href="#" className="click-scale hover:text-primary transition-all flex items-center gap-1 text-sm group-hover:translate-x-0.5">
-                      <Github size={16} /> Code
-                    </a>
-                    <a href="#" className="click-scale hover:text-primary transition-all flex items-center gap-1 text-sm group-hover:translate-x-0.5">
-                      <ExternalLink size={16} /> Live
-                    </a>
+                    {p.github && (
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="click-scale hover:text-primary transition-all flex items-center gap-1 text-sm group-hover:translate-x-0.5"
+                      >
+                        <Github size={16} /> Code
+                      </a>
+                    )}
+                    {p.live && (
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="click-scale hover:text-primary transition-all flex items-center gap-1 text-sm group-hover:translate-x-0.5"
+                      >
+                        <ExternalLink size={16} /> Live
+                      </a>
+                    )}
                   </div>
                 </div>
               </motion.div>
