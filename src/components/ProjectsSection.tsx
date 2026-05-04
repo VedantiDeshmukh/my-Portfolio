@@ -72,9 +72,9 @@ const projects: Project[] = [
     image: "",
   },
   {
-    title: "FitTrack Mobile",
-    desc: "Native Android fitness tracking app with workout plans and progress analytics.",
-    tags: ["Kotlin", "Jetpack Compose", "Room"],
+    title: "Riddle Room",
+    desc: " Riddle Room: A Multi Domain Quiz Aapplication.",
+    tags: ["Java", "Android Studio", "UI/UX"],
     category: "Android Development",
     color: "from-green-500/20 to-green-500/5",
     image: "",
