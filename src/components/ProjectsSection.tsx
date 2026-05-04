@@ -88,8 +88,8 @@ const projects: Project[] = [
     image: "",
   },
   {
-    title: "DeFi Vault",
-    desc: "Decentralized finance platform for staking and yield farming on Ethereum.",
+    title: "Lucky Draw Sytem",
+    desc: " Decentralized Lucky Draw System using Blockchain.",
     tags: ["Solidity", "Web3.js", "React"],
     category: "Blockchain",
     color: "from-indigo-500/20 to-indigo-500/5",
