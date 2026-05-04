@@ -66,6 +66,7 @@ const projects: Project[] = [
     category: "Data Analysis",
     color: "from-rose-500/20 to-rose-500/5",
     image: "",
+    github: "https://github.com/VedantiDeshmukh/Elevate-Labs-Internship/tree/main/HR_Attrition_Deliverables",
   },
   {
     title: "AI Content Generator",
