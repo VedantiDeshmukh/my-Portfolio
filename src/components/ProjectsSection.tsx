@@ -56,8 +56,8 @@ const projects: Project[] = [
     image: "",
   },
   {
-    title: "Sales Dashboard",
-    desc: "Interactive data visualization dashboard for sales analytics.",
+    title: "Employee Retention Dashboard",
+    desc: "HR Analytics & Employee Retention Dashboard.",
     tags: ["Python", "Pandas", "Plotly"],
     category: "Data Analysis",
     color: "from-rose-500/20 to-rose-500/5",
