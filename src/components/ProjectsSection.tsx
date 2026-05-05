@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import learnxImg from "@/assets/LearnX.png";
-import PhishShield from "@/assets/PhishShield.png";
+import PhishShieldAI from "@/assets/PhishShield.png";
 
 // ✅ HOW TO ADD PROJECT IMAGES:
 // 1. Place your image in src/assets/ (e.g., src/assets/project-research-agent.png)
@@ -43,7 +43,7 @@ const projects: Project[] = [
     tags: ["Python", "Classifcation", "Flask"],
     category: "AI/ML",
     color: "from-purple-500/20 to-purple-500/5",
-    image: "PhishShield",
+    image: "PhishShieldAI",
   },
   {
     title: "Salary Predictor",
