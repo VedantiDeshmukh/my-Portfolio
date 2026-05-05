@@ -33,7 +33,7 @@ const projects: Project[] = [
     tags: ["python", "OpenAI", "LangChain", ],
     category: "Generative AI",
     color: "from-emerald-500/20 to-emerald-500/5",
-    image: "",
+    image: "LearnX",
     github: "",
     live: "",
   },
