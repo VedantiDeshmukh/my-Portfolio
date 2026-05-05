@@ -43,7 +43,7 @@ const projects: Project[] = [
     tags: ["Python", "Classifcation", "Flask"],
     category: "AI/ML",
     color: "from-purple-500/20 to-purple-500/5",
-    image: "PhishShieldAI",
+    image: PhishShieldAI,
   },
   {
     title: "Salary Predictor",
