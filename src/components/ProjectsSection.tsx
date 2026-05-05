@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import learnxImg from "@/assets/LearnX.png";
-
+import PhishShield from "@/assets/PhishShield.png";
 
 // ✅ HOW TO ADD PROJECT IMAGES:
 // 1. Place your image in src/assets/ (e.g., src/assets/project-research-agent.png)
