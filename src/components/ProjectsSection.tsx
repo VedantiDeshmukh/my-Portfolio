@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import learnxImg from "@/assets/LearnX.png";
 import PhishShieldAI from "@/assets/PhishShield.png";
+import Dashboard from "@/assets/Employee.png";
+
 
 // ✅ HOW TO ADD PROJECT IMAGES:
 // 1. Place your image in src/assets/ (e.g., src/assets/project-research-agent.png)
@@ -67,7 +69,7 @@ const projects: Project[] = [
     tags: ["Python", "Pandas", "Plotly"],
     category: "Data Analysis",
     color: "from-rose-500/20 to-rose-500/5",
-    image: "",
+    image: Dashboard,
     github: "https://github.com/VedantiDeshmukh/Elevate-Labs-Internship/tree/main/HR_Attrition_Deliverables",
   },
   {
