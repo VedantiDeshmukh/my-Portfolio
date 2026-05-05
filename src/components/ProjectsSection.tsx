@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
-import learnxImg from "@/assets/project-learnX.png";
+import learnxImg from "@/assets/LearnX.png";
 
 
 // ✅ HOW TO ADD PROJECT IMAGES:
