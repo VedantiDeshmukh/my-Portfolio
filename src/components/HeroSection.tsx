@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Twitter, Instagram, Mail, User } from "lucide-react";
-import profileImg from "@/assets/profilephoto.jpg";
+import profileImg from "@/assets/profilephoto.png";
 
 
 // ✅ HOW TO SET YOUR PROFILE PHOTO:
@@ -10,7 +10,7 @@ import profileImg from "@/assets/profilephoto.jpg";
 // 3. Set the variable:
 //    const profilePhoto = profileImg;
 
-const profilePhoto = "profileImg"; // Replace with imported image
+const profilePhoto = profileImg;
 
 const HeroSection = () => {
 
