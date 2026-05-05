@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Twitter, Instagram, Mail, User } from "lucide-react";
-import profilePic from "@/assets/profilephoto.jpg";
+import profileImg from "@/assets/profilephoto.jpg";
 
 
 // ✅ HOW TO SET YOUR PROFILE PHOTO:
