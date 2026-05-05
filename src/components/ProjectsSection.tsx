@@ -14,7 +14,7 @@ import Quiz from "@/assets/Riddleroom.png";
 // 3. Set the `image` field in the project object:
 //    image: researchAgentImg,
 
-const categories = ["All Projects", "AI/ML", "Generative AI", "Agentic AI", "Blockchain", "Data Analysis", "Android Development", "Web Dev"];
+const categories = ["All Projects", "AI/ML", "Generative AI", "Agentic AI","Data Analysis", "Blockchain",  "Android Development", "Web Dev"];
 
 interface Project {
   title: string;
