@@ -10,7 +10,7 @@ import profileImg from "@/assets/profilephoto.jpg";
 // 3. Set the variable:
 //    const profilePhoto = profileImg;
 
-const profilePhoto = ""; // Replace with imported image
+const profilePhoto = "profileImg"; // Replace with imported image
 
 const HeroSection = () => {
 
