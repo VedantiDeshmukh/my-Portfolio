@@ -166,7 +166,7 @@ const ProjectsSection = () => {
           {/* Horizontal Scroll */}
           <div
             ref={scrollRef}
-            className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory px-2"
+            className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide snap-x snap-mandatory px-2 items-stretch"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {filtered.map((p, i) => (
@@ -178,7 +178,7 @@ const ProjectsSection = () => {
                 transition={{ delay: i * 0.05 }}
                 whileHover={{ y: -8, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="card-glass card-hover-glow rounded-xl overflow-hidden group min-w-[320px] md:min-w-[380px] snap-start flex-shrink-0 cursor-pointer"
+                className="card-glass card-hover-glow rounded-xl overflow-hidden group w-[320px] md:w-[380px] snap-start flex-shrink-0 cursor-pointer flex flex-col"
               >
                 <div className={`h-48 bg-gradient-to-br ${p.color} flex items-center justify-center relative overflow-hidden`}>
                   {p.image ? (
@@ -195,15 +195,15 @@ const ProjectsSection = () => {
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <h3 className="font-heading text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">{p.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <p className="text-muted-foreground text-sm mb-4 line-clamp-2">{p.desc}</p>
+                  <div className="flex flex-wrap gap-2 mb-4 mt-auto">
                     {p.tags.map((t) => (
                       <span key={t} className="bg-secondary text-secondary-foreground text-xs px-2.5 py-1 rounded-full group-hover:bg-primary/10 group-hover:text-primary transition-colors duration-300">{t}</span>
                     ))}
                   </div>
-                  <div className="flex gap-4 text-muted-foreground">
+                  <div className="flex gap-4 text-muted-foreground pt-2 border-t border-border/40">
                     {p.github && (
                       <a
                         href={p.github}
