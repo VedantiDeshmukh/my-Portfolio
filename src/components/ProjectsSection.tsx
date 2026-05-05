@@ -4,6 +4,7 @@ import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "luci
 import learnxImg from "@/assets/LearnX.png";
 import PhishShieldAI from "@/assets/PhishShield.png";
 import Dashboard from "@/assets/Employee.png";
+import Blockchain from "@/assets/Blockchain.png";
 
 
 // ✅ HOW TO ADD PROJECT IMAGES:
@@ -102,7 +103,7 @@ const projects: Project[] = [
     tags: ["Solidity", "Web3.js", "React"],
     category: "Blockchain",
     color: "from-indigo-500/20 to-indigo-500/5",
-    image: "",
+    image: Blockchain,
   },
   
 ];
