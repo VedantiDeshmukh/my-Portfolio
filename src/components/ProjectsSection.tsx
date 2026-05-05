@@ -88,6 +88,7 @@ const projects: Project[] = [
     category: "Android Development",
     color: "from-green-500/20 to-green-500/5",
     image: Quiz,
+    github:"https://github.com/VedantiDeshmukh/Android-Games/blob/main/Riddle%20Room/Riddleroomvideo.mp4",
   },
   {
     title: "Chatter Up",
