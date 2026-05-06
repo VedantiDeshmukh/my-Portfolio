@@ -1,6 +1,8 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
+import Learning from "@/assets/Learning.png";
+
 
 // ✅ HOW TO ADD A BLOG IMAGE:
 // 1. Add file to src/assets/ (e.g. src/assets/blog-close-the-book.png)
