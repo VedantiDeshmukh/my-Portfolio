@@ -80,7 +80,7 @@ const projects: Project[] = [
     tags: ["Solidity", "Web3.js", "React"],
     category: "Blockchain",
     color: "from-indigo-500/20 to-indigo-500/5",
-    image: "",
+    image: Blockchain,
   },
   // Android Development
   {
