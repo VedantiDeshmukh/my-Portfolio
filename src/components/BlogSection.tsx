@@ -27,7 +27,7 @@ const posts: Post[] = [
     tag: "Career",
     readTime: "5 min",
     url: "https://medium.com/@vedantideshmukh871/forget-highlighting-the-close-the-book-rule-for-mastering-hard-subjects-860b857b386e",
-    image: "",
+    image: Learning,
   },
 ];
 
