@@ -1,12 +1,32 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
+
+// ✅ HOW TO ADD A BLOG IMAGE:
+// 1. Add file to src/assets/ (e.g. src/assets/blog-close-the-book.png)
+// 2. import closeBookImg from "@/assets/blog-close-the-book.png";
+// 3. Set `image: closeBookImg` on the post below.
 
 const blogCategories = ["All", "AI/ML", "Quantum Computing", "DevOps", "Career"];
 
-const posts = [
-  { title: "Forget Highlighting: The “Close the Book” Rule for Mastering Hard Subjects", date: "April 15, 2026", tag: "Career", readTime: "5 min", url: "https://medium.com/@vedantideshmukh871/forget-highlighting-the-close-the-book-rule-for-mastering-hard-subjects-860b857b386e" },
-  
+interface Post {
+  title: string;
+  date: string;
+  tag: string;
+  readTime: string;
+  url: string;
+  image?: string;
+}
+
+const posts: Post[] = [
+  {
+    title: "Forget Highlighting: The “Close the Book” Rule for Mastering Hard Subjects",
+    date: "April 15, 2026",
+    tag: "Career",
+    readTime: "5 min",
+    url: "https://medium.com/@vedantideshmukh871/forget-highlighting-the-close-the-book-rule-for-mastering-hard-subjects-860b857b386e",
+    image: "",
+  },
 ];
 
 const BlogSection = () => {
@@ -85,6 +105,13 @@ const BlogSection = () => {
                 transition={{ delay: i * 0.05 }}
                 className="card-glass rounded-xl p-6 group hover:border-primary/30 transition-colors block w-[300px] md:w-[360px] snap-start flex-shrink-0"
               >
+                <div className="h-40 -mx-6 -mt-6 mb-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-t-xl overflow-hidden flex items-center justify-center">
+                  {post.image ? (
+                    <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                  ) : (
+                    <ImageIcon size={32} className="text-foreground/15" />
+                  )}
+                </div>
                 <span className="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full font-medium">{post.tag}</span>
                 <h3 className="font-heading text-lg font-semibold text-foreground mt-4 mb-3 group-hover:text-primary transition-colors flex items-start gap-2">
                   <span className="line-clamp-2 break-words">{post.title}</span>

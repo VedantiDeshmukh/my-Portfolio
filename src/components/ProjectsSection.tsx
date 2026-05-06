@@ -4,7 +4,6 @@ import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "luci
 import learnxImg from "@/assets/LearnX.png";
 import PhishShieldAI from "@/assets/PhishShield.png";
 import Dashboard from "@/assets/Employee.png";
-import Blockchain from "@/assets/Blockchain.png";
 import Quiz from "@/assets/Riddleroom.png";
 
 // ✅ HOW TO ADD PROJECT IMAGES:
@@ -28,18 +27,7 @@ interface Project {
 }
 
 const projects: Project[] = [
-  
-  
-  {
-    title: "LearnX AI",
-    desc: "Intellegent Educational Agen for Adaptive Learning.",
-    tags: ["python", "OpenAI", "LangChain", ],
-    category: "Generative AI",
-    color: "from-emerald-500/20 to-emerald-500/5",
-    image: learnxImg,
-    github: "",
-    live: "",
-  },
+  // AI/ML
   {
     title: "PhishShield",
     desc: "AI Powered Phishing Detection System.",
@@ -56,22 +44,16 @@ const projects: Project[] = [
     color: "from-orange-500/20 to-orange-500/5",
     image: "",
   },
+  // Generative AI
   {
-    title: "E-Commerce Platform",
-    desc: "Full-stack online store with cart, payments, and admin dashboard.",
-    tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
-    category: "Web Dev",
-    color: "from-cyan-500/20 to-cyan-500/5",
-    image: "",
-  },
-  {
-    title: "Employee Retention Dashboard",
-    desc: "HR Analytics & Employee Retention Dashboard.",
-    tags: ["Python", "Pandas", "Plotly"],
-    category: "Data Analysis",
-    color: "from-rose-500/20 to-rose-500/5",
-    image: Dashboard,
-    github: "https://github.com/VedantiDeshmukh/Elevate-Labs-Internship/tree/main/HR_Attrition_Deliverables",
+    title: "LearnX AI",
+    desc: "Intellegent Educational Agen for Adaptive Learning.",
+    tags: ["python", "OpenAI", "LangChain", ],
+    category: "Generative AI",
+    color: "from-emerald-500/20 to-emerald-500/5",
+    image: learnxImg,
+    github: "",
+    live: "",
   },
   {
     title: "AI Content Generator",
@@ -81,6 +63,26 @@ const projects: Project[] = [
     color: "from-amber-500/20 to-amber-500/5",
     image: "",
   },
+  // Data Analysis
+  {
+    title: "Employee Retention Dashboard",
+    desc: "HR Analytics & Employee Retention Dashboard.",
+    tags: ["Python", "Pandas", "Plotly"],
+    category: "Data Analysis",
+    color: "from-rose-500/20 to-rose-500/5",
+    image: Dashboard,
+    github: "https://github.com/VedantiDeshmukh/Elevate-Labs-Internship/tree/main/HR_Attrition_Deliverables",
+  },
+  // Blockchain
+  {
+    title: "Lucky Draw Sytem",
+    desc: " Decentralized Lucky Draw System using Blockchain.",
+    tags: ["Solidity", "Web3.js", "React"],
+    category: "Blockchain",
+    color: "from-indigo-500/20 to-indigo-500/5",
+    image: "",
+  },
+  // Android Development
   {
     title: "Riddle Room",
     desc: " Riddle Room: A Multi Domain Quiz Aapplication.",
@@ -98,15 +100,15 @@ const projects: Project[] = [
     color: "from-teal-500/20 to-teal-500/5",
     image: "",
   },
+  // Web Dev
   {
-    title: "Lucky Draw Sytem",
-    desc: " Decentralized Lucky Draw System using Blockchain.",
-    tags: ["Solidity", "Web3.js", "React"],
-    category: "Blockchain",
-    color: "from-indigo-500/20 to-indigo-500/5",
-    image: Blockchain,
+    title: "E-Commerce Platform",
+    desc: "Full-stack online store with cart, payments, and admin dashboard.",
+    tags: ["React", "Node.js", "Stripe", "PostgreSQL"],
+    category: "Web Dev",
+    color: "from-cyan-500/20 to-cyan-500/5",
+    image: "",
   },
-  
 ];
 
 const ProjectsSection = () => {
