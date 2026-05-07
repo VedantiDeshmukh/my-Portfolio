@@ -5,6 +5,7 @@ import learnxImg from "@/assets/LearnX.png";
 import PhishShieldAI from "@/assets/PhishShield.png";
 import Dashboard from "@/assets/Employee.png";
 import Quiz from "@/assets/Riddleroom.png";
+import Blockchain from "@/assets/Blockchain.png";
 
 // ✅ HOW TO ADD PROJECT IMAGES:
 // 1. Place your image in src/assets/ (e.g., src/assets/project-research-agent.png)
