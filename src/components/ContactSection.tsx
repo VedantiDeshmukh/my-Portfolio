@@ -49,7 +49,7 @@ const ContactSection = () => {
             <Linkedin size={22} className="text-primary" />
             <span>LinkedIn</span>
           </a>
-          <a href="https://medium.com/@deshmukhvedanti2002" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
+          <a href="https://medium.com/@vedantideshmukh871" target="_blank" rel="noopener noreferrer" className="click-scale flex items-center gap-3 text-muted-foreground hover:text-primary transition-all text-lg p-2 rounded-lg hover:bg-primary/10">
             <MediumIcon size={22} className="text-primary" />
             <span>Medium</span>
           </a>
