@@ -1,18 +1,24 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ArrowDown, Github, Linkedin, Twitter, Instagram, Mail, User } from "lucide-react";
-import profileImg from "@/assets/profilephoto.png";
-
-
-// ✅ HOW TO SET YOUR PROFILE PHOTO:
-// 1. Place your photo in src/assets/ (e.g., src/assets/profile-photo.jpg)
-// 2. Import it below:
-//    import profileImg from "@/assets/profile-photo.jpg";
-// 3. Set the variable:
-//    const profilePhoto = profileImg;
-
-const profilePhoto = profileImg;
+import profileDark from "@/assets/profile-dark.png";
+import profileLight from "@/assets/profile-light.png";
 
 const HeroSection = () => {
+  const [isLight, setIsLight] = useState(
+    typeof document !== "undefined" && document.documentElement.classList.contains("light")
+  );
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const update = () => setIsLight(root.classList.contains("light"));
+    update();
+    const observer = new MutationObserver(update);
+    observer.observe(root, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
+  const profilePhoto = isLight ? profileLight : profileDark;
 
   return (
     <section id="home" className="min-h-screen flex items-center section-padding pt-32 relative overflow-hidden">
@@ -69,7 +75,7 @@ const HeroSection = () => {
               
               {profilePhoto ? (
                 <div className="relative w-full h-full rounded-full overflow-hidden">
-                  <img src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover" />
+                  <img key={profilePhoto} src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover" />
                   <div className="absolute inset-0 rounded-full" style={{
                     background: "radial-gradient(circle, transparent 55%, hsl(var(--background)) 100%)"
                   }} />
