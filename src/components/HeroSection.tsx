@@ -83,7 +83,7 @@ const HeroSection = () => {
               
               {profilePhoto ? (
                 <div className="relative w-full h-full rounded-full overflow-hidden">
-                  <img src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover" loading="eager" decoding="async" />
+                  <img src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover object-top" loading="eager" decoding="async" />
                   <div className="absolute inset-0 rounded-full" style={{
                     background: "radial-gradient(circle, transparent 55%, hsl(var(--background)) 100%)"
                   }} />
