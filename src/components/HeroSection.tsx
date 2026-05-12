@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { ArrowDown, Github, Linkedin, Twitter, Instagram, Mail, User } from "lucide-react";
 import profileDark from "@/assets/profilephoto.png";
 import profileLight from "@/assets/profilephoto.png";
+import profile_light from "@/assets/profile_light.png";
+import Profile_dark from "@/assets/Profile_dark.png";
 
 const HeroSection = () => {
   const [isLight, setIsLight] = useState(
@@ -18,7 +20,7 @@ const HeroSection = () => {
     return () => observer.disconnect();
   }, []);
 
-  const profilePhoto = isLight ? profileLight : profileDark;
+  const profilePhoto = isLight ? profile_light : Profile_dark;
 
   return (
     <section id="home" className="min-h-screen flex items-center section-padding pt-32 relative overflow-hidden">
