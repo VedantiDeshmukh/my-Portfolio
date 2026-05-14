@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowDown, Github, Linkedin, Twitter, Instagram, Mail, User } from "lucide-react";
-import profile_light from "@/assets/profile_light.png";
-import Profile_dark from "@/assets/Profile_dark.png";
+import profile_light from "@/assets/profile_light_optimized.webp";
+import Profile_dark from "@/assets/profile_dark_optimized.webp";
 
 const HeroSection = () => {
   const [isLight, setIsLight] = useState(
@@ -20,7 +20,7 @@ const HeroSection = () => {
 
   const profilePhoto = isLight ? profile_light : Profile_dark;
 
-  // Preload both images so the swap is instant
+  // Preload both optimized images so the swap is instant
   useEffect(() => {
     [profile_light, Profile_dark].forEach((src) => {
       const img = new Image();
@@ -83,7 +83,7 @@ const HeroSection = () => {
               
               {profilePhoto ? (
                 <div className="relative w-full h-full rounded-full overflow-hidden">
-                  <img src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover object-top" loading="eager" decoding="async" />
+                  <img src={profilePhoto} alt="Vedanti Deshmukh" className="w-full h-full object-cover object-top" loading="eager" decoding="sync" fetchPriority="high" />
                   <div className="absolute inset-0 rounded-full" style={{
                     background: "radial-gradient(circle, transparent 55%, hsl(var(--background)) 100%)"
                   }} />
