@@ -34,7 +34,7 @@ const HeroSection = () => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-20" style={{ background: "var(--gradient-hero)" }} />
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="flex flex-col-reverse md:flex-row items-center gap-12">
+        <div className="flex flex-col-reverse md:flex-row items-start gap-12">
           <motion.div
             className="flex-1"
             initial={{ opacity: 0, y: 40 }}
@@ -72,7 +72,7 @@ const HeroSection = () => {
 
           {/* Profile Photo */}
           <motion.div
-            className="flex-shrink-0"
+            className="flex-shrink-0 md:mt-4"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
