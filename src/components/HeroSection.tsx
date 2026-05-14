@@ -77,7 +77,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2 cursor-pointer">
               {/* Blended glow behind photo */}
               <div className="absolute inset-0 rounded-full opacity-40 blur-2xl" style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.5), transparent 70%)" }} />
               
