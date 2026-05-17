@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
+import SectionGlow from "./SectionGlow";
 import learnxImg from "@/assets/LearnX.png";
 import PhishShieldAI from "@/assets/PhishShield.png";
 import Dashboard from "@/assets/Employee.png";
@@ -125,7 +126,8 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-padding relative overflow-hidden">
+      <SectionGlow variant="right" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

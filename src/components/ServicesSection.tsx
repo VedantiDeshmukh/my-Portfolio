@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Globe, Server, Brain, BarChart3, Sparkles, Bot, Cloud, Atom } from "lucide-react";
+import SectionGlow from "./SectionGlow";
 
 const services = [
   { icon: Globe, title: "Web Development", desc: "Web apps built with modern frameworks and best practices." },
@@ -14,7 +15,8 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="section-padding">
+    <section id="services" className="section-padding relative overflow-hidden">
+      <SectionGlow variant="left" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

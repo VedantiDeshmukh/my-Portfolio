@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, ChevronLeft, ChevronRight, ImageIcon } from "lucide-react";
 import Learning from "@/assets/Learning.png";
+import SectionGlow from "./SectionGlow";
 
 
 // ✅ HOW TO ADD A BLOG IMAGE:
@@ -44,7 +45,8 @@ const BlogSection = () => {
   };
 
   return (
-    <section id="blog" className="section-padding">
+    <section id="blog" className="section-padding relative overflow-hidden">
+      <SectionGlow variant="left" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

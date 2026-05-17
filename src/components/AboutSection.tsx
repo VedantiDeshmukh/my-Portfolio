@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { BrainCircuit, BarChart3, Atom } from "lucide-react";
+import SectionGlow from "./SectionGlow";
 
 const highlights = [
   {
@@ -21,7 +22,8 @@ const highlights = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding">
+    <section id="about" className="section-padding relative overflow-hidden">
+      <SectionGlow variant="left" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

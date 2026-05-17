@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SectionGlow from "./SectionGlow";
 import {
   Code, Database, Brain, BarChart3, Globe, GitBranch,
   Cpu, Layers, Terminal, Cloud, Figma, FileJson,
@@ -71,7 +72,8 @@ const skills = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="section-padding">
+    <section id="skills" className="section-padding relative overflow-hidden">
+      <SectionGlow variant="right" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
