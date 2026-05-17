@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { ArrowDown, Github, Linkedin, Twitter, Instagram, Mail, User } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Twitter, Instagram, Mail, User, FileText } from "lucide-react";
 import profile_light from "@/assets/profile_light_optimized.webp";
 import Profile_dark from "@/assets/profile_dark_optimized.webp";
 
@@ -58,6 +58,14 @@ const HeroSection = () => {
               </a>
               <a href="#projects" className="click-scale border border-border text-foreground font-heading font-medium px-8 py-3 rounded-lg hover:border-primary/50 hover:bg-primary/5 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.1)] transition-all duration-300">
                 View Work
+              </a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="click-scale inline-flex items-center gap-2 border border-primary/40 text-primary font-heading font-medium px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground hover:shadow-[0_4px_20px_hsl(var(--primary)/0.3)] transition-all duration-300"
+              >
+                <FileText size={18} /> Resume
               </a>
             </div>
 
