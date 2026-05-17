@@ -63,7 +63,7 @@ const HeroSection = () => {
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="click-scale inline-flex items-center gap-2 border border-primary/40 text-primary font-heading font-medium px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground hover:shadow-[0_4px_20px_hsl(var(--primary)/0.3)] transition-all duration-300"
+                className="click-scale inline-flex items-center gap-2 border border-border text-foreground font-heading font-medium px-8 py-3 rounded-lg hover:border-primary/50 hover:bg-primary/5 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.1)] transition-all duration-300"
               >
                 <FileText size={18} /> Resume
               </a>
