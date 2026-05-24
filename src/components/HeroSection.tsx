@@ -56,16 +56,22 @@ const HeroSection = () => {
               <a href="#contact" className="click-scale bg-primary text-primary-foreground font-heading font-medium px-8 py-3 rounded-lg hover:brightness-110 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.4)] transition-all duration-300">
                 Get in Touch
               </a>
-              <a href="#projects" className="click-scale border border-border text-foreground font-heading font-medium px-8 py-3 rounded-lg hover:border-primary/50 hover:bg-primary/5 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.1)] transition-all duration-300">
-                View Work
+              <a
+                href="#projects"
+                className="group relative overflow-hidden click-scale border border-primary/40 text-foreground font-heading font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_hsl(var(--primary)/0.35)] hover:-translate-y-0.5"
+              >
+                <span className="relative z-10">View Work</span>
+                <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-primary/30 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
               </a>
               <a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="click-scale inline-flex items-center gap-2 border border-border text-foreground font-heading font-medium px-8 py-3 rounded-lg hover:border-primary/50 hover:bg-primary/5 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.1)] transition-all duration-300"
+                className="group relative overflow-hidden click-scale inline-flex items-center gap-2 border border-primary/40 text-foreground font-heading font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_hsl(var(--primary)/0.35)] hover:-translate-y-0.5"
               >
-                <FileText size={18} /> Resume
+                <FileText size={18} className="relative z-10 transition-transform duration-300 group-hover:rotate-[-6deg] group-hover:scale-110" />
+                <span className="relative z-10">Resume</span>
+                <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-primary/30 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
               </a>
             </div>
 
