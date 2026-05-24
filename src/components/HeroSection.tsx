@@ -88,10 +88,21 @@ const HeroSection = () => {
           <motion.div
             className="flex-shrink-0 md:mt-4"
             initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
+            transition={{
+              opacity: { duration: 0.8, delay: 0.2 },
+              scale: { duration: 0.8, delay: 0.2 },
+              y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 },
+            }}
           >
             <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 transition-transform duration-300 ease-out hover:scale-105 hover:-translate-y-2 cursor-pointer">
+              {/* Rotating gradient ring */}
+              <motion.div
+                className="absolute -inset-2 rounded-full opacity-70 blur-[2px]"
+                style={{ background: "conic-gradient(from 0deg, hsl(var(--primary)/0.7), transparent 40%, transparent 60%, hsl(var(--primary)/0.7))" }}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              />
               {/* Blended glow behind photo */}
               <div className="absolute inset-0 rounded-full opacity-40 blur-2xl" style={{ background: "radial-gradient(circle, hsl(var(--primary) / 0.5), transparent 70%)" }} />
               

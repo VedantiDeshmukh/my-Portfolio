@@ -59,16 +59,24 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="grid gap-4"
           >
-            {highlights.map((item) => (
-              <div key={item.label} className="card-glass rounded-xl p-5 flex items-start gap-4">
-                <div className="bg-primary/10 p-2.5 rounded-lg text-primary">
+            {highlights.map((item, i) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 * i }}
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="group card-glass rounded-xl p-5 flex items-start gap-4 transition-shadow duration-300 hover:shadow-[0_10px_40px_-10px_hsl(var(--primary)/0.4)] hover:border-primary/40 cursor-default"
+              >
+                <div className="bg-primary/10 p-2.5 rounded-lg text-primary transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
                   <item.icon size={20} />
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-foreground mb-1">{item.label}</h3>
                   <p className="text-muted-foreground text-sm">{item.desc}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
