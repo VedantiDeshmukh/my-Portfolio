@@ -28,6 +28,13 @@ const HeroSection = () => {
     });
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center section-padding pt-32 relative overflow-hidden">
       {/* Background glow */}
@@ -53,18 +60,21 @@ const HeroSection = () => {
             </p>
 
             <div className="flex items-center gap-6 mb-16">
-              <a href="#contact" className="click-scale bg-primary text-primary-foreground font-heading font-medium px-8 py-3 rounded-lg hover:brightness-110 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.4)] transition-all duration-300">
+              <button 
+                onClick={() => scrollToSection("contact")} 
+                className="click-scale bg-primary text-primary-foreground font-heading font-medium px-8 py-3 rounded-lg hover:brightness-110 hover:shadow-[0_4px_20px_hsl(var(--primary)/0.4)] transition-all duration-300 cursor-pointer"
+              >
                 Get in Touch
-              </a>
-              <a
-                href="#projects"
-                className="group relative overflow-hidden click-scale border border-primary/40 text-foreground font-heading font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_hsl(var(--primary)/0.35)] hover:-translate-y-0.5"
+              </button>
+              <button
+                onClick={() => scrollToSection("projects")}
+                className="group relative overflow-hidden click-scale border border-primary/40 text-foreground font-heading font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_hsl(var(--primary)/0.35)] hover:-translate-y-0.5 cursor-pointer"
               >
                 <span className="relative z-10">View Work</span>
                 <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-primary/30 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full" />
-              </a>
+              </button>
               <a
-                href="/resume.pdf"
+                href="/my-Portfolio/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative overflow-hidden click-scale inline-flex items-center gap-2 border border-primary/40 text-foreground font-heading font-medium px-8 py-3 rounded-lg transition-all duration-300 hover:border-primary hover:shadow-[0_0_25px_hsl(var(--primary)/0.35)] hover:-translate-y-0.5"
