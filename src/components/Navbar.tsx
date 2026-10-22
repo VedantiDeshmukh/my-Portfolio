@@ -4,35 +4,46 @@ import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Services", href: "#services" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", id: "home" },
+  { label: "Projects", id: "projects" },
+  { label: "About", id: "about" },
+  { label: "Skills", id: "skills" },
+  { label: "Services", id: "services" },
+  { label: "Blog", id: "blog" },
+  { label: "Contact", id: "contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollToSection = (id: string) => {
+    setIsOpen(false);
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-        <a href="#home" className="font-heading text-xl font-bold text-primary">
+        <button
+          onClick={() => scrollToSection("home")}
+          className="font-heading text-xl font-bold text-primary cursor-pointer text-left"
+        >
           Portfolio<span className="text-foreground">.</span>
-        </a>
+        </button>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+            <button
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-[-4px] after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left cursor-pointer"
             >
               {link.label}
-            </a>
+            </button>
           ))}
           <ThemeToggle />
         </div>
@@ -60,14 +71,13 @@ const Navbar = () => {
           >
             <div className="flex flex-col px-4 py-4 gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 px-3 py-2 rounded-lg transition-all"
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-left text-sm text-muted-foreground hover:text-primary hover:bg-primary/5 px-3 py-2 rounded-lg transition-all cursor-pointer"
                 >
                   {link.label}
-                </a>
+                </button>
               ))}
             </div>
           </motion.div>
